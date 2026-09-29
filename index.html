@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>تپش | طراحی سایت حرفه‌ای و مدرن</title> 
+<meta name="description" content="تپش؛ طراحی سایت حرفه‌ای، مدرن و ریسپانسیو برای کسب‌وکارها و ایده‌های آنلاین.">
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background: #0a0a0a;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    /* ===== Header ===== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(12, 12, 12, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+header h2 {
+    margin: 0;
+    font-size: 25px;
+    color: #00d4ff;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00d4ff;
+    right: 0;
+    bottom: -7px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+    /* ===== عمومی ===== */
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-title span {
+        color: #888;
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+        margin: 15px 0;
+        letter-spacing: 1px;
+    }
+
+    .section-title p {
+        color: #888;
+    }
+
+    button {
+        background: white;
+        color: #111;
+        border: none;
+        padding: 14px 35px;
+        border-radius: 8px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    }
+    /* ===== افکت شیشه‌ای ===== */
+
+.card,
+.portfolio-card,
+.about-box,
+.contact-form {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.card:hover,
+.portfolio-card:hover {
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(0, 212, 255, 0.06);
+}
+/* ===== اسکرول نرم ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+  /* ===== Hero ===== */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(0, 212, 255, 0.12), transparent 35%),
+        linear-gradient(145deg, #101010, #080808);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: rgba(0, 212, 255, 0.07);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content > span {
+    display: inline-block;
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.35;
+    margin: 0 0 25px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffffff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #999;
+    font-size: 18px;
+    line-height: 2;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons button {
+    min-width: 170px;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-buttons button:first-child {
+    background: #00d4ff;
+    color: #071014;
+    border: 1px solid #00d4ff;
+}
+
+.hero-buttons button:first-child:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.25);
+}
+
+.hero-buttons button:last-child {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.hero-buttons button:last-child:hover {
+    border-color: #00d4ff;
+    color: #00d4ff;
+    transform: translateY(-3px);
+}  
+
+  /* ===== خدمات ===== */
+
+.services {
+    padding: 100px 25px;
+    background: #0b0b0b;
+    position: relative;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 212, 255, 0.05);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 20%;
+    right: -100px;
+    pointer-events: none;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title h2 {
+    margin: 0 0 15px;
+    font-size: 40px;
+    color: #fff;
+}
+
+.section-title p {
+    margin: 0;
+    color: #777;
+    line-height: 1.9;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    flex: 1;
+    max-width: 350px;
+    padding: 35px 28px;
+    background: linear-gradient(145deg, #171717, #101010);
+    border: 1px solid #252525;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 212, 255, 0.08);
+    filter: blur(45px);
+    border-radius: 50%;
+    top: -50px;
+    right: -40px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 212, 255, 0.45);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 0 15px;
+    position: relative;
+}
+
+.card p {
+    color: #888;
+    line-height: 1.9;
+    margin: 0;
+    position: relative;
+} 
+
+ /* ===== نمونه کارها ===== */
+
+.portfolio {
+    padding: 100px 25px;
+    background: #101010;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 212, 255, 0.05);
+    filter: blur(110px);
+    border-radius: 50%;
+    left: -120px;
+    top: 20%;
+    pointer-events: none;
+}
+
+.portfolio-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-card {
+    flex: 1;
+    max-width: 350px;
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 212, 255, 0.45);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #0c0c0c;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.08);
+}
+
+.portfolio-card h3 {
+    color: #fff;
+    font-size: 21px;
+    margin: 22px 22px 10px;
+}
+
+.portfolio-card p {
+    color: #777;
+    line-height: 1.8;
+    margin: 0 22px 25px;
+}  
+
+   /* ===== درباره ما ===== */
+
+.about {
+    padding: 100px 25px;
+    background: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 212, 255, 0.05);
+    filter: blur(110px);
+    border-radius: 50%;
+    right: -120px;
+    top: 20%;
+    pointer-events: none;
+}
+
+.about-content {
+    width: 520px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content > span {
+    color: #00d4ff;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    color: #fff;
+    font-size: 42px;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.about-content p {
+    color: #888;
+    font-size: 17px;
+    line-height: 2;
+    margin: 0;
+}
+
+.about-box {
+    width: 360px;
+    padding: 35px;
+    background: linear-gradient(145deg, #171717, #101010);
+    border: 1px solid #252525;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-box div {
+    padding: 20px 0;
+    border-bottom: 1px solid #292929;
+    text-align: center;
+}
+
+.about-box div:last-child {
+    border-bottom: none;
+}
+
+.about-box strong {
+    display: block;
+    color: #00d4ff;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.about-box span {
+    color: #777;
+    font-size: 14px;
+} 
+
+   /* ===== تماس ===== */
+
+.contact {
+    padding: 100px 25px;
+    background: #101010;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 212, 255, 0.05);
+    filter: blur(110px);
+    border-radius: 50%;
+    left: -120px;
+    top: 20%;
+    pointer-events: none;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 50px auto 0;
+    padding: 35px;
+    background: linear-gradient(145deg, #171717, #101010);
+    border: 1px solid #252525;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: #0c0c0c;
+    color: #fff;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 18px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background: #00d4ff;
+    color: #071014;
+    border: 1px solid #00d4ff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+    /* ===== Footer ===== */
+
+  
+
+.footer {
+    background: linear-gradient(145deg, #151515, #0d0d0d);
+    border-top: 1px solid #292929;
+    padding: 70px 30px 25px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-content h2 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.footer-content p {
+    color: #777;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid #292929;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}  
+
+    /* ===== انیمیشن ===== */
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+   /* ===== موبایل ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 14px 18px;
+        min-height: 70px;
+    }
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    .menu-btn {
+        display: block;
+        padding: 7px 11px;
+        font-size: 21px;
+        border-radius: 8px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(21, 21, 21, 0.98);
+        border-bottom: 1px solid #292929;
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 8px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.45;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-buttons button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .services,
+    .portfolio,
+    .contact {
+        padding: 80px 15px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .section-title p {
+        line-height: 1.9;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        min-height: auto;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .portfolio-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .portfolio-image {
+        height: 210px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 80px 20px;
+        gap: 35px;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 650px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+        line-height: 1.6;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .about-box {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 25px 18px;
+        margin-top: 35px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 55px 20px 20px;
+        margin-top: 50px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        line-height: 1.8;
+    }
+} 
+.contact-phone {
+    max-width: 650px;
+    margin: 25px auto 0;
+    padding: 20px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-phone span {
+    display: block;
+    color: #888;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contact-phone a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-phone a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+.card-link {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 22px;
+    border: 1px solid #00d4ff;
+    border-radius: 8px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.card-link:hover {
+    background: #00d4ff;
+    color: #071014;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+}
+.portfolio-link {
+    display: inline-block;
+    margin: 0 22px 25px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.portfolio-link:hover {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.08);
+    transform: translateY(-2px);
+}
+section[id] {
+    scroll-margin-top: 85px;
+}
+</style>
+```
+
+</head>
+
+<body>
+
+`
+<!-- ===== Header ===== -->
+
+<header>
+    <h2>تپش</h2>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات ما</a>
+        <a href="#portfolio">نمونه‌کارها</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+</header>
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span>طراحی سایت حرفه‌ای</span>
+
+        <h1>ایده‌ات رو به یک سایت واقعی تبدیل کن</h1>
+
+        <p>
+            ما بهت کمک می‌کنیم یک سایت مدرن، سریع و حرفه‌ای داشته باشی
+            که هم زیبا باشه و هم نتیجه بگیره.
+        </p>
+
+        <div class="hero-buttons">
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                شروع پروژه
+            </button>
+
+            <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+                دیدن نمونه‌کارها
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<main>
+
+ 
+
+
+    <!-- ===== خدمات ===== -->
+
+    <section id="services" class="services">
+
+        <div class="section-title">
+
+            <span>خدمات ما</span>
+
+            <h2>
+                چطور می‌تونیم کمکت کنیم؟
+            </h2>
+
+            <p>
+                راهکارهای حرفه‌ای برای حضور بهتر شما در فضای آنلاین
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">🌐</div>
+
+             <h3>طراحی سایت</h3>   
+
+                <p>
+                    طراحی سایت مدرن و حرفه‌ای متناسب با نیاز کسب‌وکار شما.
+                </p>
+<a href="#contact" class="card-link">شروع پروژه</a>
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">💻</div>
+
+              <h3>طراحی اختصاصی</h3>  
+
+                <p>
+                    ساخت صفحات اختصاصی با ظاهر متفاوت و تجربه کاربری مناسب.
+                </p>
+<a href="#contact" class="card-link">شروع پروژه</a>
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📱</div>
+
+             <h3>طراحی ریسپانسیو</h3>   
+
+                <p>
+                    نمایش صحیح و زیبا در موبایل، تبلت و کامپیوتر.
+                </p>
+<a href="#contact" class="card-link">شروع پروژه</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== نمونه کارها ===== -->
+
+    <section id="portfolio" class="portfolio reveal">
+
+        <div class="section-title">
+
+            <span>نمونه‌کارها</span>
+
+            <h2>
+                پروژه‌های ما
+            </h2>
+
+            <p>
+                چند نمونه از پروژه‌هایی که طراحی کرده‌ایم
+            </p>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="company.jpg" alt="پروژه طراحی سایت شرکتی">
+                </div>
+
+                <h3>
+                    سایت شرکتی
+                </h3>
+
+                <p>
+                    طراحی سایت حرفه‌ای برای شرکت‌ها
+                </p>
+<a href="#contact" class="portfolio-link">سفارش پروژه مشابه</a>
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="shop.jpg" alt="پروژه طراحی سایت فروشگاهی">
+                </div>
+
+                <h3>
+                    سایت فروشگاهی
+                </h3>
+
+                <p>
+                    طراحی فروشگاه آنلاین مدرن
+                </p>
+<a href="#contact" class="portfolio-link">سفارش پروژه مشابه</a>
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="personal.jpg" alt="پروژه طراحی سایت شخصی">
+                </div>
+
+                <h3>
+                    سایت شخصی
+                </h3>
+
+                <p>
+                    طراحی سایت شخصی و رزومه‌ای
+                </p>
+<a href="#contact" class="portfolio-link">سفارش پروژه مشابه</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== درباره ما ===== -->
+
+    <section id="about" class="about reveal">
+
+        <div class="about-content">
+
+            <span>
+                درباره ما
+            </span>
+
+            <h2>
+                ما فقط سایت نمی‌سازیم؛
+                <br>
+                تجربه می‌سازیم.
+            </h2>
+
+            <p>
+                ما با تمرکز روی طراحی مدرن و تجربه کاربری،
+                به کسب‌وکارها کمک می‌کنیم حضور حرفه‌ای‌تری
+                در فضای آنلاین داشته باشند.
+            </p>
+
+            <p>
+                هدف ما ساخت سایت‌هایی سریع، زیبا و کاربردی است
+                که بتوانند نیاز واقعی کاربران و صاحبان کسب‌وکار
+                را برطرف کنند.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div>
+                <strong>+50</strong>
+                <span>پروژه</span>
+            </div>
+
+            <div>
+                <strong>+30</strong>
+                <span>مشتری</span>
+            </div>
+
+            <div>
+                <strong>+3</strong>
+                <span>سال تجربه</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== تماس ===== -->
+
+    <section id="contact" class="contact reveal">
+
+        <div class="section-title">
+
+            <span>
+                تماس با ما
+            </span>
+
+            <h2>
+                با ما در ارتباط باشید
+            </h2>
+
+            <p>
+                اگر سوال یا پیشنهادی دارید، پیام خود را برای ما ارسال کنید.
+            </p>
+<div class="contact-phone">
+    <span>تماس مستقیم</span>
+    <a href="tel:09025340482">09025340482</a>
+</div>
+        </div>
+
+
+      <form class="contact-form" action="https://formspree.io/f/mnpnlbnr" method="POST">
+
+    <input type="text" name="name" placeholder="نام شما" required>
+
+    <input type="email" name="email" placeholder="ایمیل شما" required>
+
+    <textarea name="message" placeholder="پیام شما" required></textarea>
+
+    <button type="submit">ارسال پیام</button>
+
+</form>
+
+    </section>
+
+</main>
+
+
+<!-- ===== Footer ===== -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>تپش</h2>
+
+            <p>
+                طراحی سایت حرفه‌ای برای کسب‌وکارهای مدرن.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">خانه</a>
+            <a href="#services">خدمات</a>
+            <a href="#portfolio">نمونه‌کارها</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        © 2026 تمامی حقوق محفوظ است.
+    </div>
+
+</footer>
+
+
+<!-- ===== JavaScript ===== -->
+
+<script>
+
+  const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function(event) {
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        event.preventDefault();
+        alert("لطفاً همه قسمت‌ها را کامل کنید.");
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        event.preventDefault();
+        alert("لطفاً یک ایمیل معتبر وارد کنید.");
+        return;
+    }
+});  
+
+
+    function toggleMenu() {
+
+        const nav = document.querySelector("nav");
+
+        nav.classList.toggle("active");
+
+    }
+
+
+    const navLinks = document.querySelectorAll("nav a");
+
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document.querySelector("nav").classList.remove("active");
+
+        });
+
+    });
+
+</script>
+```
+
+</body>
+</html>
